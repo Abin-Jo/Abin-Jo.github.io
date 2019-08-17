@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<title>Profit Cash Value</title>
+<head>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css?family=Raleway">
+
+<script type="text/javascript">
+	const second = 1000, minute = second * 60, hour = minute * 60, day = hour * 24;
+
+	let countDown = new Date('Sep 30, 2019 00:00:00').getTime(), x = setInterval(
+			function() {
+
+				let now = new Date().getTime(), distance = countDown - now;
+
+				document.getElementById('days').innerText = Math.floor(distance
+						/ (day)),
+						document.getElementById('hours').innerText = Math
+								.floor((distance % (day)) / (hour)), document
+								.getElementById('minutes').innerText = Math
+								.floor((distance % (hour)) / (minute)),
+						document.getElementById('seconds').innerText = Math
+								.floor((distance % (minute)) / second);
+
+			}, second)
+</script>
+<style>
+body, h1 {
+	font-family: "Raleway", sans-serif
+}
+
+body, html {
+	height: 100%
+}
+
+.backgimg {
+	background-image: url('Images/big-one.jpg');
+	min-height: 100%;
+	width: 100%;
+	background-position: center;
+	background-size: auto;
+}
+
+.pcv-animate-opacity {
+	animation: opac 2s
+}
+
+@
+keyframes opac {
+	from {opacity: 0
+}
+
+to {
+	opacity: 1
+}
+
+}
+.pcv-display-container {
+	position: relative
+}
+
+.pcv-text-white, .pcv-hover-text-white:hover {
+	color: #fff !important
+}
+
+.pcv-display-topleft {
+	position: absolute;
+	left: 0;
+	top: 0
+}
+
+.pcv-padding-large {
+	padding: 12px 24px !important
+}
+
+.pcv-xlarge {
+	font-size: 24px !important
+}
+
+.pcv-display-middle {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%)
+}
+
+.pcv-display-middle1 {
+	position: absolute;
+	top: 80%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%)
+}
+
+.pcv-display-middle2 {
+	position: absolute;
+	top: 70%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%)
+}
+
+.pcv-jumbo {
+	font-size: 64px !important
+}
+
+.pcv-animate-top {
+	position: relative;
+	animation: animatetop 2s
+}
+
+@
+keyframes animatetop {
+	from {top: -300px;
+	opacity: 0
+}
+
+to {
+	top: 0;
+	opacity: 1
+}
+
+}
+.pcv-border-grey:hover {
+	border-color: #9e9e9e !important
+}
+
+.pcv-large {
+	font-size: 18px !important
+}
+
+.pcv-center {
+	text-align: center
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.container1 {
+	color: #dae0e0;
+	text-align: center;
+}
+
+li {
+	display: inline-block;
+	font-size: 1.5em;
+	list-style-type: none;
+	padding: 1em;
+	text-transform: uppercase;
+}
+
+li span {
+	display: block;
+	font-size: 4.5rem;
+}
+</style>
+</head>
+<body>
+
+	<div
+		class="backgimg pcv-display-container pcv-animate-opacity pcv-text-white">
+		<div class="pcv-display-topleft pcv-padding-large pcv-xlarge">
+			Profit Cash Value</div>
+		<div class="pcv-display-middle">
+			<h1 class="pcv-jumbo pcv-animate-top">COMING SOON</h1>
+			<hr class="pcv-border-grey" style="margin: auto; width: 40%">
+		</div>
+
+		<div class="container1 pcv-display-middle1 ">
+
+			<ul>
+				<li><span id="days"></span>days</li>
+				<li><span id="hours"></span>Hours</li>
+				<li><span id="minutes"></span>Minutes</li>
+				<li><span id="seconds"></span>Seconds</li>
+			</ul>
+		</div>
+
+	</div>
+	<div class="pcv-display-middle1 pcv-text-white pcv-hover-text-white">
+		<marquee width="100%" direction="left" height="100px">
+			Website Under Construction! </marquee>
+	</div>
+
+
+
+
+
+
+</body>
+</html>
